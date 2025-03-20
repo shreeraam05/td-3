@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "name": "Shirt",
+      "description": "Cotton shirt",
+      "price": 20,
+      "category": "clothing",
+      "inStock": true,
+      "id": 1
+    }
+  ],
+  "orders": {},
+  "carts": {}
+}

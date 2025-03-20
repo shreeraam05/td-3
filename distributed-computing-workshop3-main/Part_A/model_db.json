@@ -1,0 +1,1 @@
+{"model1": {"weight": 0.8, "balance": 900, "url": "http://localhost:5001/predict"}, "model2": {"weight": 0.8, "balance": 900, "url": "http://localhost:5002/predict"}, "model3": {"weight": 0.8, "balance": 900, "url": "http://localhost:5003/predict"}}

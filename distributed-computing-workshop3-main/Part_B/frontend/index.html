@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce</title>
+</head>
+<body>
+    <h1>E-commerce Store</h1>
+    <h2>Products</h2>
+    <ul id="products"></ul>
+    <h2>Add Product</h2>
+    <input id="name" placeholder="Name"><br>
+    <input id="description" placeholder="Description"><br>
+    <input id="price" type="number" placeholder="Price"><br>
+    <input id="category" placeholder="Category"><br>
+    <button onclick="addProduct()">Add Product</button>
+
+    <script>
+        async function fetchProducts() {
+            const response = await fetch('http://localhost:3001/products');
+            const products = await response.json();
+            const ul = document.getElementById('products');
+            ul.innerHTML = products.map(p => `<li>${p.name} - $${p.price}</li>`).join('');
+        }
+
+        async function addProduct() {
+            const product = {
+                name: document.getElementById('name').value,
+                description: document.getElementById('description').value,
+                price: parseFloat(document.getElementById('price').value),
+                category: document.getElementById('category').value,
+                inStock: true
+            };
+            await fetch('http://localhost:3001/products', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(product)
+            });
+            fetchProducts();
+        }
+
+        fetchProducts();
+    </script>
+</body>
+</html>

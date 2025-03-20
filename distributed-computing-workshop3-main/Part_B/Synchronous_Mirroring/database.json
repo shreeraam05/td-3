@@ -1,0 +1,38 @@
+{
+  "products": [
+    {
+      "name": "Shirt",
+      "description": "Cotton shirt",
+      "price": 20,
+      "category": "clothing",
+      "inStock": true,
+      "id": 1
+    },
+    {
+      "name": "Shirt",
+      "description": "Cotton shirt",
+      "price": 20,
+      "category": "clothing",
+      "inStock": true,
+      "id": 2
+    },
+    {
+      "name": "Shirt",
+      "description": "Cotton shirt",
+      "price": 20,
+      "category": "clothing",
+      "inStock": true,
+      "id": 3
+    },
+    {
+      "name": "Jacket",
+      "description": "Winter jacket",
+      "price": 50,
+      "category": "clothing",
+      "inStock": true,
+      "id": 4
+    }
+  ],
+  "orders": {},
+  "carts": {}
+}
